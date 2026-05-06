@@ -20,3 +20,7 @@ Screenshot
 Without this mod ![Alt text](/images/2026-05-06_20.43.12.png)
 
 With this mod ![Alt text](/images/2026-05-06_20.44.45.png)
+
+Build
+===
+You have a neoforge voxy copy before build this project, put it in `libs/voxy.jar`
