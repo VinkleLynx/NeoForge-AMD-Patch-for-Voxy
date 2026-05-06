@@ -23,4 +23,4 @@ With this mod ![Alt text](/images/2026-05-06_20.44.45.png)
 
 Build
 ===
-You have a neoforge voxy copy before build this project, put it in `libs/voxy.jar`
+You need have a neoforge voxy copy before build this project, put it in `libs/voxy.jar`
