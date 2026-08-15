@@ -136,12 +136,20 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     ]
     inputs.properties replaceProperties
     expand replaceProperties
-    from "src/main/templates"
+
+    from("src/main/resources/META-INF") {
+        into "META-INF"
+    }
     into "build/generated/sources/modMetadata"
 }
 // Include the output of "generateModMetadata" as an input directory for the build
 // this works with both building through Gradle and the IDE.
 sourceSets.main.resources.srcDir generateModMetadata
+
+def rawToml = file('src/main/resources/META-INF/neoforge.mods.toml').canonicalPath
+sourceSets.main.resources.exclude { element ->
+    element.file.canonicalPath == rawToml
+}
 // To avoid having to run "generateModMetadata" manually, make it run on every project reload
 neoForge.ideSyncTask generateModMetadata
 
