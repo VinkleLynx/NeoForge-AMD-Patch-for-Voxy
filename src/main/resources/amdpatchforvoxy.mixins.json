@@ -1,15 +1,10 @@
 {
   "required": true,
   "package": "com.festival.amdpatchforvoxy.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [],
-  "injectors": {
-    "defaultRequire": 1
-  },
-  "overwrites": {
-    "requireAnnotations": true
-  },
   "client": [
     "ShaderLoaderMixin"
-  ]
+  ],
+  "minVersion": "0.8"
 }

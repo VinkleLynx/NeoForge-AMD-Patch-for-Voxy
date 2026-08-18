@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ShaderLoader.class)
 public class ShaderLoaderMixin {
 
-    @Inject(method = "parse", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "parse", at = @At("RETURN"), cancellable = true, remap = false)
     private static void injectAmdFix(String id, CallbackInfoReturnable<String> cir) {
         String source = cir.getReturnValue();
 
